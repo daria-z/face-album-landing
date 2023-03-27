@@ -49,7 +49,7 @@ if (ScrollTrigger.isTouch !== 1) {
 
 	gsap.fromTo(
     ".video",
-    { opacity: 0, x: -50 },
+    { opacity: 0, x: -80 },
     {
       opacity: 1,
       x: 0,
@@ -68,7 +68,7 @@ if (!!window.IntersectionObserver) {
 
   let observer = new IntersectionObserver(
     (entries, observer) => {
-      entries.forEach((entry) => {
+			entries.forEach((entry) => {
         if (entry.intersectionRatio == 1 && video.paused) {
           video.play();
         } else {
